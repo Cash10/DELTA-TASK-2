@@ -1,0 +1,38 @@
+<html>
+<head>
+<body>
+  <svg id="goip" width="350" height="400">
+    <line x1="0"  y1="0"  x2="0"  y2="350"  style="stroke:#ff0000;"/>
+    <line x1="0"  y1="350"  x2="500"  y2="350" style="stroke:#000066;"/>
+  </svg>
+  <input id="k" type="text">
+  <input type="button" value="CHANGE DIMENSION" onclick="changeDimensions()"/>
+  
+   <script>
+   var c=40;
+   var t=[];
+   var i=0;
+   function changeDimensions()
+   {
+    t.push(i);
+    var l=t[i];
+    var d=document.getElementById("k").value
+    l=document.createElementNS("http://www.w3.org/2000/svg","rect");
+    l.setAttribute('x',c);
+     l.setAttribute('y',350-d);
+      l.setAttribute('width',15);
+       l.setAttribute('height',d);
+        l.setAttribute('fill', '#FFFF00');
+        var svg=document.getElementById('goip');
+        svg.appendChild(l);
+        c+=30;
+        i++;
+      }
+     
+      </script>
+</head>
+    </html>
+   
+
+   
+
